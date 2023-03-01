@@ -13,8 +13,10 @@
     box-sizing: border-box;
     font-family: 'Montserrat', 'Fraunces';
 }
+@media (min-width: 600px) {
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -27,6 +29,7 @@ body {
     border-radius: 1rem;
     background-color: var(--White);
     width: 600px;
+    flex-shrink: 0;
 }
 .card-imagem {
     width: 50%;
@@ -87,7 +90,95 @@ body {
 }
 .btn:hover {
     cursor: pointer;
-    background-color: var(--Very-dark-blue);
+    background-color: #003a00;
 }
-/* .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); } */
+}
+@media (max-width: 600px)
+{
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: var(--Cream);
+        padding: 56vh 0;
+    }
+    .container {
+        background-color: var(--White);
+        display: flex;
+        flex-direction: column;
+        width: 50vh;
+        border-radius: 2rem 2rem .5rem .5rem;
+    }
+    .card-imagem {
+        max-width: 100%;
+    }
+    .card-imagem img {
+        max-width: 100%;
+        width: auto;
+        border-radius: .5rem .5rem 0 0;
+    }
+    .card-texto {
+        border-radius: 0 0 .5rem .5rem;
+    }
+    .inner-card {
+        display: flex;
+        flex-direction: column;
+        margin: 1.5rem;
+    }
+    .perfume, .titulo, .info, .preco, .btn {
+        padding-bottom: 1rem;
+    }
+    .perfume {
+        font-size: 14px;
+        color: var(--Dark-grayish-blue);
+        font-family: 'Montserrat';
+    }
+    .titulo {
+        font-size: 2rem;
+        font-family: 'Fraunces';
+        font-weight: 700;
+    }
+    .info {
+        color: var(--Dark-grayish-blue);
+        font-size: 14px;
+        font-family: 'Montserrat';
+        text-align: left;
+    }
+    .preco {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        gap: 1rem;
+    }
+    .preco-atual {
+        color: var(--Dark-cyan);
+        font-family: 'Fraunces';
+    }
+    .preco-antigo {
+        color: var(--Dark-grayish-blue);
+        font-size: .8rem;
+        text-decoration: line-through;
+        font-weight: 500;
+    }
+    .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        background-color: var(--Dark-cyan);
+        border: none;
+        border-radius: .5rem;
+        padding: 1rem;
+        color: var(--White);
+        font-weight: bold;
+    }
+    .inner-card button:hover {
+        cursor: pointer;
+        background-color: #003a00;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
