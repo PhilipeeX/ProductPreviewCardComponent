@@ -34,6 +34,7 @@ body {
 .card-imagem img{
     border-radius: 1rem 0 0 1rem;
     width: 100%;
+    object-fit: cover;
 }
 .card-texto {
     width: 50%;
